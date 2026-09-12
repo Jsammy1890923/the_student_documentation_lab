@@ -3,27 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Student Documentation Lab™ | Master Defense Portal & Administrative Records Authority</title>
-  <meta name="description" content="Turnkey forensic record-keeping systems, technical email response banks, and evidentiary audit workflows for students facing unfair AI flags and academic integrity inquiries.">
+  <title>The Student Documentation Lab™ | Master Defense Portal</title>
+  <meta name="description" content="Transform student distress into institutional-grade administrative audit trails. Turnkey forensic record-keeping for AI false positives and academic integrity inquiries.">
   <link rel="canonical" href="https://studentdocumentationlab.tech/">
 
-  <!-- Payhip Native Modal Script -->
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Student Documentation Lab™ | Master Defense Portal">
+  <meta property="og:description" content="Stop Panicking. Start Documenting. Forensic defense frameworks to defeat false AI cheating accusations.">
+  <meta property="og:url" content="https://studentdocumentationlab.tech/">
+  <meta property="og:image" content="https://studentdocumentationlab.tech/01_turnitin_hero.png">
+
+  <!-- Payhip Native Checkout & Popup Script -->
   <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Student Documentation Lab™",
+    "url": "https://studentdocumentationlab.tech/",
+    "description": "Administrative record-keeping systems and forensic workflows for students facing academic integrity inquiries.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Student Documentation Lab™",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://studentdocumentationlab.tech/01_turnitin_hero.png"
+      }
+    }
+  }
+  </script>
 
   <style>
     :root {
+      /* Strategic Brand Palette */
       --bg-primary: #0A0D14;
-      --bg-surface: #0D1B2A;
+      --bg-surface: #0D1626; /* Deep Navy */
       --bg-card: #112240;
       --text-main: #FFFFFF;
-      --text-muted: #94A3B8;
+      --text-muted: #94A3B8; /* Auditor Slate */
       --neon-blue: #00D2FF;
       --neon-mint: #00FFA3;
-      --neon-red: #FF3366;
+      --neon-red: #FF3366; /* Evidentiary Crimson */
       --border: #1E293B;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       background-color: var(--bg-primary);
       color: var(--text-main);
@@ -32,91 +60,47 @@
       padding-bottom: 5rem;
     }
 
-    a { color: var(--neon-blue); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: var(--neon-blue); text-decoration: none; transition: all 0.2s ease; }
+    a:hover { text-decoration: underline; color: var(--neon-mint); }
 
     /* Top Emergency Alert Ribbon */
     .emergency-ribbon {
-      background: rgba(0, 210, 255, 0.08);
-      border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+      background: rgba(255, 51, 102, 0.1);
+      border-bottom: 1px solid rgba(255, 51, 102, 0.3);
       text-align: center;
-      padding: 0.65rem 1rem;
-      font-size: 0.85rem;
-      color: var(--neon-blue);
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-main);
       font-family: monospace;
     }
-    .emergency-ribbon a {
-      color: var(--neon-mint);
-      font-weight: 700;
-      margin-left: 0.5rem;
-      text-decoration: underline;
-    }
+    .emergency-ribbon a { color: var(--neon-red); font-weight: 800; margin-left: 0.5rem; text-decoration: underline; }
+    .emergency-ribbon a:hover { color: #FFF; }
 
     /* Main Navigation Bar */
     header {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 1.5rem 1.5rem;
+      padding: 1.5rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--border);
+      gap: 1rem;
     }
 
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+    .brand-group { display: flex; flex-direction: column; }
+    .brand-title { font-size: 1.25rem; font-weight: 900; letter-spacing: -0.01em; color: #FFFFFF; }
+    .brand-sub { font-size: 0.75rem; font-family: monospace; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
 
-    .brand-title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      color: #FFFFFF;
-    }
-    .brand-sub {
-      font-size: 0.7rem;
-      font-family: monospace;
-      color: var(--neon-blue);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      font-size: 0.9rem;
-    }
-
-    .btn-nav-blog {
-      color: var(--neon-mint);
-      font-weight: 700;
-      border: 1px solid rgba(0, 255, 163, 0.3);
-      padding: 0.45rem 0.9rem;
-      border-radius: 4px;
-      background: rgba(0, 255, 163, 0.05);
-    }
-    .btn-nav-blog:hover {
-      background: rgba(0, 255, 163, 0.15);
-      text-decoration: none;
-    }
-
-    .btn-nav-kit {
-      background: linear-gradient(90deg, #00D2FF 0%, #00FFA3 100%);
-      color: #0A0D14;
-      font-weight: 800;
-      padding: 0.45rem 1rem;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-    .btn-nav-kit:hover { opacity: 0.92; text-decoration: none; }
+    .nav-actions { display: flex; align-items: center; gap: 1.25rem; font-size: 0.95rem; font-weight: 600; }
+    .btn-nav-blog { color: var(--neon-mint); border: 1px solid rgba(0, 255, 163, 0.3); padding: 0.5rem 1rem; border-radius: 4px; background: rgba(0, 255, 163, 0.05); }
+    .btn-nav-blog:hover { background: rgba(0, 255, 163, 0.15); text-decoration: none; }
 
     /* Hero Section */
     .hero {
-      max-width: 900px;
-      margin: 4rem auto 3rem auto;
+      max-width: 800px;
+      margin: 5rem auto 3rem auto;
       text-align: center;
       padding: 0 1.5rem;
     }
@@ -124,251 +108,160 @@
     .badge-pill {
       display: inline-block;
       font-family: monospace;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       color: var(--neon-blue);
       background: rgba(0, 210, 255, 0.08);
       border: 1px solid rgba(0, 210, 255, 0.25);
-      padding: 0.35rem 0.85rem;
+      padding: 0.4rem 1rem;
       border-radius: 20px;
       margin-bottom: 1.5rem;
     }
 
-    .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
-    }
+    .hero h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
     .hero h1 span { color: var(--neon-blue); display: block; }
+    .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem auto; line-height: 1.7; }
 
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 720px;
-      margin: 0 auto 2.25rem auto;
-    }
-
-    /* Emergency Start Here Banner */
-    .emergency-banner {
+    /* Red Zone -> Blue Zone Triage Banner */
+    .triage-banner {
       background: var(--bg-surface);
-      border: 1px solid var(--neon-mint);
+      border: 1px solid var(--neon-red);
+      border-left: 6px solid var(--neon-red);
       border-radius: 8px;
-      padding: 1.5rem;
-      max-width: 820px;
+      padding: 2rem;
+      max-width: 800px;
       margin: 0 auto 4rem auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      text-align: center;
+      text-align: left;
     }
-    @media (min-width: 680px) {
-      .emergency-banner {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-      }
-    }
-
-    .emergency-banner h3 {
-      color: #FFFFFF;
-      font-size: 1.15rem;
-      margin-bottom: 0.25rem;
-    }
-    .emergency-banner p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin: 0;
-    }
-
+    .triage-banner h3 { color: #FFFFFF; font-size: 1.3rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .triage-banner p { color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    
     .btn-emergency {
-      background: var(--neon-mint);
-      color: #0A0D14;
-      font-weight: 800;
-      padding: 0.75rem 1.4rem;
-      border-radius: 4px;
-      white-space: nowrap;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
+      display: inline-block; background: var(--neon-red); color: #FFFFFF; font-weight: 800;
+      padding: 0.85rem 1.75rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;
+      text-decoration: none; transition: opacity 0.2s ease;
     }
-    .btn-emergency:hover { opacity: 0.9; text-decoration: none; }
+    .btn-emergency:hover { opacity: 0.9; text-decoration: none; color: #FFF;}
 
-    /* 3-Column Hub Grid */
-    .grid-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
-    }
-    @media (min-width: 880px) {
-      .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
+    /* Core Product Vault */
+    .vault-container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
     .card {
       background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.2s ease;
+      border: 1px solid var(--neon-blue);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
-    .card:hover { border-color: rgba(0, 210, 255, 0.4); }
+    .card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .card-icon { font-size: 2.5rem; }
+    .card h2 { font-size: 1.8rem; color: #FFFFFF; font-weight: 800; }
+    .card-desc { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.7; }
 
-    .card-icon {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
+    .action-grid { display: flex; flex-direction: column; gap: 1rem; }
+    .action-btn {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 1.5rem; border-radius: 8px; font-weight: 700; text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
-
-    .card h2 {
-      font-size: 1.35rem;
-      color: #FFFFFF;
-      margin-bottom: 0.75rem;
-    }
-
-    .card-desc {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      flex-grow: 1;
-    }
-
-    .card-links {
-      list-style: none;
-      border-top: 1px solid var(--border);
-      padding-top: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      font-size: 0.9rem;
-    }
-
-    .card-links li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-    .card-links li::before {
-      content: "•";
-      color: var(--neon-blue);
-      font-weight: bold;
-    }
+    .action-btn:hover { transform: translateY(-2px); text-decoration: none; }
+    
+    .btn-primary { background: linear-gradient(90deg, #00D2FF 0%, #00FFA3 100%); color: #0A0D14; border: none; }
+    .btn-primary:hover { opacity: 0.95; color: #0A0D14; }
+    
+    .btn-secondary { background: rgba(0, 255, 163, 0.05); border: 1px solid var(--neon-mint); color: var(--neon-mint); }
+    .btn-secondary:hover { background: rgba(0, 255, 163, 0.15); color: var(--neon-mint); }
+    
+    .btn-tertiary { background: rgba(0, 210, 255, 0.05); border: 1px solid var(--border); color: var(--text-main); }
+    .btn-tertiary:hover { border-color: var(--neon-blue); color: var(--text-main); }
 
     /* Footer */
     footer {
-      max-width: 1200px;
-      margin: 5rem auto 0 auto;
-      padding: 2rem 1.5rem 0 1.5rem;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-size: 0.85rem;
-      color: #64748B;
+      max-width: 1000px; margin: 5rem auto 0 auto; padding: 2rem 1.5rem 0 1.5rem;
+      border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: #64748B;
     }
+    footer a { color: var(--neon-blue); text-decoration: none; margin: 0 0.5rem; }
     footer p { margin-bottom: 0.5rem; }
   </style>
 </head>
 <body>
 
   <!-- Top Announcement Ribbon -->
-  <div class="emergency-ribbon">
-    🚨 Falsely Accused of AI on an Essay? 
-    <a href="/blog/appeal-ai-false-positive-turnitin.html">Read the 48-Hour Appeal Guide &amp; Protocol &rarr;</a>
+  <div class="emergency-ribbon" role="alert">
+    ⚠️ <strong>CRISIS TRIAGE:</strong> Falsely accused of AI cheating by Turnitin or your professor? 
+    <a href="/blog/appeal-ai-false-positive-turnitin.html">Execute the 48-Hour Defense Protocol &rarr;</a>
   </div>
 
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header>
     <div class="brand-group">
-      <div>
-        <div class="brand-title">The Student Documentation Lab™</div>
-        <div class="brand-sub">Master Defense Portal</div>
-      </div>
+      <div class="brand-title">The Student Documentation Lab™</div>
+      <div class="brand-sub">Administrative Records &amp; Academic Defense</div>
     </div>
-    <div class="nav-actions">
-      <a href="/blog/appeal-ai-false-positive-turnitin.html" class="btn-nav-blog">📖 Appeal Guide &amp; Blog</a>
+    <nav class="nav-actions" aria-label="Main Navigation">
+      <a href="/blog/appeal-ai-false-positive-turnitin.html" class="btn-nav-blog">📖 Read The Appeal Guide</a>
       <a href="/disclaimer.html" style="color: var(--text-muted);">Legal</a>
-      <a href="https://payhip.com/buy?link=icTVm" class="btn-nav-kit" target="_blank" rel="noopener">Get Toolkit ($27)</a>
-    </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
   <main>
     <section class="hero">
-      <div class="badge-pill">Administrative Records Authority</div>
+      <div class="badge-pill">The 51% Preponderance of Evidence Standard</div>
       <h1>Stop Panicking.<span>Start Documenting.</span></h1>
-      <p>Unfair academic integrity flags, AI detector false positives, and surveillance logs require a structured administrative defense. Select your specialized case branch below to access tailored forensic kits, legal guides, and evidence workflows.</p>
-
-      <!-- Immediate Action Banner -->
-      <div class="emergency-banner">
-        <div>
-          <h3>Turnitin Flagged Your Submission 100% AI?</h3>
-          <p>Dismantle the score with Stanford research statistics and unalterable version history logs.</p>
-        </div>
-        <a href="/blog/appeal-ai-false-positive-turnitin.html" class="btn-emergency">Read Guide Immediately &rarr;</a>
-      </div>
+      <p>Transform raw student distress into institutional-grade administrative audit trails. Defeat probabilistic AI false-flags with deterministic, unalterable digital forensics.</p>
     </section>
 
-    <!-- 3-Column Hub Grid -->
-    <div class="grid-container">
+    <!-- Emergency Triage Banner -->
+    <section class="triage-banner" aria-labelledby="triage-heading">
+      <h3 id="triage-heading">🚨 In the "Red Zone" (0-48 Hours)?</h3>
+      <p>Do not send an emotional apology. Universities run on administrative proof, not emotional appeals. Hitting send on a frantic email legally destroys your credibility before a hearing even begins. Shift to the "Blue Zone" and demand procedural discovery.</p>
+      <a href="/blog/appeal-ai-false-positive-turnitin.html" class="btn-emergency">Learn How To Halt The Inquiry &rarr;</a>
+    </section>
 
-      <!-- Column 1: Standard Baseline Hub -->
+    <!-- Core Vault Section -->
+    <section class="vault-container" aria-labelledby="vault-heading">
       <div class="card">
-        <div class="card-icon">📌</div>
-        <h2>Standard Baseline Hub</h2>
-        <p class="card-desc">For domestic and general students facing Turnitin AI detection flags, Canvas DOM window blur errors, and standard honor code inquiries.</p>
-        <ul class="card-links">
-          <li><a href="/blog/appeal-ai-false-positive-turnitin.html"><strong>Turnitin False Positive Appeal Guide</strong></a></li>
-          <li><a href="https://payhip.com/b/OTXF2" class="payhip-buy-button" data-theme="green" data-product="OTXF2">🎁 Free 3-Sentence Evidence Request Script</a></li>
-          <li><a href="https://www.youtube.com/watch?v=Ks9nbp74aJE" target="_blank" rel="noopener">Watch Forensic Defense Video (YouTube)</a></li>
-          <li><a href="https://payhip.com/buy?link=icTVm" target="_blank" rel="noopener"><strong>The 24-Hour Response Kit™ ($27)</strong></a></li>
-        </ul>
+        <div class="card-header">
+          <div class="card-icon">📂</div>
+          <h2 id="vault-heading">The Standard Baseline Defense Hub</h2>
+        </div>
+        <p class="card-desc">Your centralized repository for defeating standard honor code inquiries, Canvas DOM window blur errors, and Turnitin AI detection flags. Implement cryptographic integrity and MMDDYY_HHMM atomic filing rules today.</p>
+        
+        <div class="action-grid">
+          <!-- Primary Conversion -->
+          <a href="https://payhip.com/buy?link=icTVm" class="action-btn btn-primary" target="_blank" rel="noopener">
+            <span>📥 Download The 24-Hour Response Kit™ ($27)</span>
+            <span>&rarr;</span>
+          </a>
+          
+          <!-- Lead Magnet -->
+          <a href="https://payhip.com/b/OTXF2" class="action-btn btn-secondary payhip-buy-button" data-theme="green" data-product="OTXF2">
+            <span>🎁 Get The 3-Sentence Evidence Request Script ($0)</span>
+            <span>&rarr;</span>
+          </a>
+          
+          <!-- Media/Education -->
+          <a href="https://www.youtube.com/watch?v=Ks9nbp74aJE" class="action-btn btn-tertiary" target="_blank" rel="noopener">
+            <span>▶️ Watch Forensic Defense Walkthrough (YouTube)</span>
+            <span>&nearr;</span>
+          </a>
+        </div>
       </div>
-
-      <!-- Column 2: International & F-1 Visa Branch -->
-      <div class="card">
-        <div class="card-icon">🛂</div>
-        <h2>International &amp; F-1 Visa Branch</h2>
-        <p class="card-desc">Specialized protection for F-1 and J-1 visa holders where an unappealed academic sanction triggers SEVIS termination and deportation risks.</p>
-        <ul class="card-links">
-          <li><a href="/blog/appeal-ai-false-positive-turnitin.html">Stanford HAI 61.2% Detector Bias Study</a></li>
-          <li><a href="/blog/appeal-ai-false-positive-turnitin.html#step-1-requesting-unredacted-software-reports--telemetry">Emergency Administrative Stay Petitions</a></li>
-          <li><a href="/blog/appeal-ai-false-positive-turnitin.html#step-2-preserving-your-version-history--writing-progression">ESL Multilingual Drafting Audits</a></li>
-          <li><a href="https://payhip.com/buy?link=icTVm" target="_blank" rel="noopener"><strong>Download Full Visa Defense Dossier</strong></a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Neurodivergent Defense System -->
-      <div class="card">
-        <div class="card-icon">🧠</div>
-        <h2>Neurodivergent Defense System</h2>
-        <p class="card-desc">For autistic, ADHD, and hyperlexic students whose structural syntax and uniform sentence rhythms trigger false algorithmic cheating flags.</p>
-        <ul class="card-links">
-          <li><a href="/blog/appeal-ai-false-positive-turnitin.html">Section 504 &amp; ADA Legal Protections</a></li>
-          <li><a href="/blog/appeal-ai-false-positive-turnitin.html#the-campus-policy-trap--systemic-chaos">Stylometric Perplexity Baselines</a></li>
-          <li><a href="/blog/appeal-ai-false-positive-turnitin.html#step-3-compiling-your-forensic-evidence-dossier">Executive Function Study Suites</a></li>
-          <li><a href="https://payhip.com/buy?link=icTVm" target="_blank" rel="noopener"><strong>The 24-Hour Response Kit™ (ND Protocol)</strong></a></li>
-        </ul>
-      </div>
-
-    </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>THE STUDENT DOCUMENTATION LAB™ • MASTER DEFENSE PORTAL • NOT LEGAL ADVICE</p>
+    <p><strong>THE STUDENT DOCUMENTATION LAB™</strong> • ADMINISTRATIVE RECORDS SYSTEM • NOT LEGAL ADVICE</p>
     <p>
       <a href="/disclaimer.html">Terms &amp; Legal Disclaimer</a> | 
       <a href="/blog/appeal-ai-false-positive-turnitin.html">Turnitin AI Appeal Guide</a> | 
       <a href="https://www.youtube.com/@TheStudentDocumentationLab" target="_blank" rel="noopener">Official YouTube</a>
     </p>
-    <p style="margin-top: 0.5rem; font-size: 0.75rem;">Administrative records management and educational self-help systems. For legal representation, consult a licensed attorney or campus ombudsman.</p>
+    <p style="margin-top: 1rem; font-size: 0.75rem; color: #475569;">
+      Administrative records management and educational self-help systems. For legal representation, consult a licensed attorney or campus ombudsman.
+    </p>
   </footer>
 
 </body>
