@@ -1,93 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Disclaimer & Terms of Use | The Student Documentation Lab™</title>
-    <meta name="description" content="Legal disclaimer, terms of use, and educational self-help framework boundaries for The Student Documentation Lab™.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .font-mono-code { font-family: 'Geist Mono', monospace; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Disclaimer & Terms of Use | The Student Documentation Lab™</title>
+  <meta name="description" content="Universal Ethical & Legal Governance Disclaimer, terms of use, and educational self-help framework boundaries for The Student Documentation Lab™.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://studentdocumentationlab.tech/disclaimer.html">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Legal Disclaimer and Terms of Use",
+    "description": "Terms of Service, Refund Policy, and Legal Disclaimer for The Student Documentation Lab.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Student Documentation Lab™"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #0A0D14;
+      --bg-surface: #0D1626;
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --neon-blue: #00D2FF;
+      --neon-mint: #00FFA3;
+      --neon-red: #FF3366;
+      --border: #1E293B;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+
+    a { color: var(--neon-blue); text-decoration: none; transition: all 0.2s ease; }
+    a:hover { text-decoration: underline; color: var(--neon-mint); }
+
+    /* Header */
+    header {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-title { font-size: 1.25rem; font-weight: 900; letter-spacing: -0.01em; color: #FFFFFF; }
+    .brand-sub { font-size: 0.75rem; font-family: monospace; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .nav-actions { font-size: 0.95rem; font-weight: 600; }
+    .btn-nav-blog { color: var(--neon-mint); border: 1px solid rgba(0, 255, 163, 0.3); padding: 0.5rem 1rem; border-radius: 4px; background: rgba(0, 255, 163, 0.05); }
+    .btn-nav-blog:hover { background: rgba(0, 255, 163, 0.15); text-decoration: none; }
+
+    /* Main Content */
+    main {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h1 { font-size: 2.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 0.5rem; color: #FFFFFF; }
+    .last-updated { font-family: monospace; font-size: 0.85rem; color: var(--neon-blue); margin-bottom: 3rem; display: block; }
+
+    .legal-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .legal-section h2 {
+      font-size: 1.25rem;
+      color: var(--neon-blue);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .legal-section p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section strong { color: #FFFFFF; }
+
+    .closing-box {
+      background: rgba(0, 210, 255, 0.05);
+      border: 1px solid var(--neon-blue);
+      border-left: 5px solid var(--neon-blue);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-family: monospace;
+      font-size: 0.9rem;
+      color: var(--neon-blue);
+    }
+    .closing-box strong { color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 1.1rem;}
+
+    /* Footer */
+    footer {
+      max-width: 1000px; margin: 4rem auto 0 auto; padding: 2rem 1.5rem 0 1.5rem;
+      border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: #64748B;
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-slate-950">
+<body>
 
-    <!-- Header -->
-    <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
-            <a href="/" class="flex items-center space-x-3 group">
-                <span class="text-2xl p-1.5 bg-slate-800 border border-slate-700 rounded-lg group-hover:border-cyan-500 transition">⚖️</span>
-                <div>
-                    <span class="text-base font-bold text-white tracking-tight flex items-center gap-1.5">
-                        The Student Documentation Lab<span class="text-xs text-cyan-400 font-mono-code">™</span>
-                    </span>
-                    <p class="text-[11px] text-slate-400 font-mono-code">LEGAL DISCLAIMER & TERMS OF USE</p>
-                </div>
-            </a>
-            <nav class="flex items-center gap-2 sm:gap-4 text-xs font-mono-code">
-                <a href="/" class="px-3 py-1.5 rounded-md text-slate-300 hover:text-white hover:bg-slate-800 transition">← Back to Lab</a>
-            </nav>
-        </div>
-    </header>
+  <!-- Header -->
+  <header>
+    <div>
+      <div class="brand-title">The Student Documentation Lab™</div>
+      <div class="brand-sub">Universal Governance Disclaimer</div>
+    </div>
+    <nav class="nav-actions">
+      <a href="/" class="btn-nav-blog">&larr; Back to Portal</a>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow space-y-8">
-        
-        <header class="border-b border-slate-800 pb-6 space-y-2">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">LEGAL DISCLAIMER AND TERMS OF USE</h1>
-            <p class="text-xs font-mono-code text-cyan-400">The Student Documentation Lab™ • Last Updated: September 5, 2026</p>
-        </header>
+  <main>
+    <h1>LEGAL DISCLAIMER &amp; TERMS OF USE</h1>
+    <span class="last-updated">Document ID: SEL-DOC-003 | Last Updated: September 2026</span>
 
-        <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
-            <section class="space-y-2">
-                <h2 class="text-lg font-bold text-white">1. Educational and Informational Purposes Only; Not Legal Advice</h2>
-                <p>The Student Documentation Lab™ provides administrative record-keeping systems, templates, file organization tools, and educational self-help frameworks. All content, tools, materials, templates, and resources available on this website, on our product pages, or through our products (collectively, the "Services") are provided for general educational, organizational, and informational purposes only.</p>
-                <p>The Services do not constitute, and must not be used or relied upon as, formal legal advice, legal opinions, or legal representation. The laws, federal guidelines (such as Title IX, Section 504, and the ADA), state statutes, and individual institutional student codes of conduct are complex, vary heavily by jurisdiction, and are constantly changing. No general template or system can account for the unique, specific factual and procedural nuances of an individual student's situation.</p>
-            </section>
+    <div class="legal-section">
+      <h2>1. Educational and Informational Purposes Only; Not Legal Advice</h2>
+      <p>The Student Documentation Lab™ provides administrative record-keeping systems, templates, file organization tools, and educational self-help frameworks. All content, tools, materials, templates, and resources available on this website, on our product pages, or through our products (collectively, the "Services") are provided for general educational, organizational, and informational purposes only.</p>
+      <p>The Services do not constitute, and must not be used or relied upon as, formal legal advice, legal opinions, or legal representation. The laws, federal guidelines (such as Title IX, Section 504, FERPA 34 CFR § 99.20, and the ADA), state statutes, and individual institutional student codes of conduct are complex and vary heavily by jurisdiction. No general template or system can account for the unique, specific factual and procedural nuances of an individual student's situation.</p>
+    </div>
 
-            <section class="space-y-2">
-                <h2 class="text-lg font-bold text-white">2. No Attorney-Client Relationship</h2>
-                <p>The Student Documentation Lab™ is not a law firm, and our employees, representatives, and advisors are not acting as your attorneys. Your use of this website, purchase or download of any products or templates, or submission of inquiries or communications to us does not create an attorney-client relationship between you and The Student Documentation Lab™ (or any of its affiliates).</p>
-                <p>An attorney-client relationship can only be established through an explicit, separate, signed written agreement with a licensed legal professional. Accordingly, do not send us any confidential, sensitive, or legally privileged information. Unsolicited communications sent to us through this website, via email, or through any other electronic means are not protected by attorney-client privilege or confidentiality, and we cannot guarantee the security or privacy of electronic transmissions.</p>
-            </section>
+    <div class="legal-section">
+      <h2>2. No Attorney-Client Relationship</h2>
+      <p>The Student Documentation Lab™ is not a law firm, and our employees, representatives, and advisors are not acting as your attorneys. Your use of this website, purchase or download of any products or templates, or submission of inquiries or communications to us does not create an attorney-client relationship between you and The Student Documentation Lab™.</p>
+      <p>An attorney-client relationship can only be established through an explicit, separate, signed written agreement with a licensed legal professional. Accordingly, do not send us any confidential, sensitive, or legally privileged information.</p>
+    </div>
 
-            <section class="space-y-2">
-                <h2 class="text-lg font-bold text-white">3. No Guarantees of Outcomes or Accuracy</h2>
-                <p>While our objective is to help students achieve administrative clarity, organization, and procedural awareness, every disciplinary proceeding, academic integrity investigation, or misconduct accusation is unique and depends on its own specific facts and the distinct regulations of the respective educational institution.</p>
-                <p>The Student Documentation Lab™ makes no guarantees, warranties, or representations—express or implied—regarding the outcome of any school proceeding, appeal, or investigation. Past results, examples of successful defenses, or testimonials do not constitute a guarantee, warranty, or prediction regarding the outcome of your specific matter. Every case must be judged on its own individual merits.</p>
-                <p>We endeavor to keep our curated data and organizational frameworks accurate and up-to-date; however, we are not responsible for inadvertent errors, omissions, or changes in institutional policies, local/state laws, or federal regulations that may occur.</p>
-            </section>
+    <div class="legal-section">
+      <h2>3. Purchase Policy &amp; Digital Fulfillment</h2>
+      <p><strong>All sales are final.</strong> Because our products deliver immediate, full access to proprietary documentation templates, evidentiary workflows, and forensic frameworks, we enforce a strict administrative purchase rule: all sales are final due to the immediate, irreversible nature of digital evidence downloads.</p>
+    </div>
 
-            <section class="space-y-2">
-                <h2 class="text-lg font-bold text-white">4. Limitation of Liability and Indemnification</h2>
-                <p>To the maximum extent permitted by applicable law, in no event shall The Student Documentation Lab™, its founders, owners, employees, contractors, or affiliates be liable for any direct, indirect, incidental, special, exemplary, consequential, or punitive damages (including, but not limited to, academic suspension, expulsion, transcript notation, loss of tuition, emotional distress, or legal fees) arising out of or in any way connected with your use of, or reliance on, our templates, systems, or informational content. You agree to use our tools, files, and resources entirely at your own risk. You agree to indemnify, defend, and hold harmless The Student Documentation Lab™ from any claims, liabilities, or expenses arising from your use of the Services.</p>
-            </section>
+    <div class="legal-section">
+      <h2>4. No Guarantees of Outcomes or Accuracy</h2>
+      <p>Our objective is to transition students from emotional appeals to administrative proof capable of satisfying the 51% Preponderance of Evidence standard utilized by most university adjudications. However, every disciplinary proceeding, academic integrity investigation, or misconduct accusation is judged on its own individual merits.</p>
+      <p>The Student Documentation Lab™ makes no guarantees, warranties, or representations—express or implied—regarding the outcome of any school proceeding, appeal, or investigation. We are not responsible for inadvertent errors, omissions, or changes in institutional policies (e.g., OCR CPM §§ 102, 106, 702), local/state laws, or federal regulations that may occur.</p>
+    </div>
 
-            <section class="space-y-2">
-                <h2 class="text-lg font-bold text-white">5. Recommendation to Seek Licensed Counsel</h2>
-                <p>Student disciplinary charges, particularly accusations of academic dishonesty, cheating, or AI-facilitated plagiarism, are serious matters that can have life-altering consequences for your academic career, transcript, and future professional opportunities. Administrative guides, self-help templates, and file organization systems are not a substitute for the customized representation of a licensed attorney.</p>
-                <p>If you are facing serious allegations that could result in suspension, expulsion, or criminal liability, we strongly urge you to consult with a qualified, licensed attorney or student-defense advocate in your jurisdiction to protect your rights and help prepare your defense.</p>
-            </section>
-        </div>
+    <div class="legal-section">
+      <h2>5. Limitation of Liability and Indemnification</h2>
+      <p>To the maximum extent permitted by applicable law, in no event shall The Student Documentation Lab™, its founders, owners, employees, contractors, or affiliates be liable for any direct, indirect, incidental, special, exemplary, consequential, or punitive damages (including, but not limited to, academic suspension, expulsion, transcript notation, loss of tuition, emotional distress, or legal fees) arising out of or in any way connected with your use of, or reliance on, our templates, systems, or informational content. You agree to indemnify, defend, and hold harmless The Student Documentation Lab™ from any claims, liabilities, or expenses arising from your use of the Services.</p>
+    </div>
 
-        <!-- Closing Signature -->
-        <div class="p-5 rounded-xl border border-cyan-500/30 bg-cyan-950/20 text-xs font-mono-code text-cyan-300 space-y-1">
-            <p>Created to help you protect your rights by TheStudentDocumentationLab™</p>
-            <p class="font-bold text-white">Stop Panicking. Start Documenting.</p>
-        </div>
+    <div class="legal-section">
+      <h2>6. Recommendation to Seek Licensed Counsel</h2>
+      <p>Student disciplinary charges, particularly accusations of academic dishonesty, cheating, or AI-facilitated plagiarism, are serious matters that can have life-altering consequences for your academic career, transcript, and future professional opportunities. Administrative guides, self-help templates, and file organization systems are not a substitute for the customized representation of a licensed attorney.</p>
+      <p>If you are facing serious allegations that could result in suspension, expulsion, or criminal liability, we strongly urge you to consult with a qualified, licensed attorney or campus ombudsman in your jurisdiction to protect your rights.</p>
+    </div>
 
-    </main>
+    <div class="closing-box">
+      <strong>Stop Panicking. Start Documenting.</strong><br>
+      Created to help you protect your rights by TheStudentDocumentationLab™
+    </div>
+  </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-500 font-mono-code">
-        <div class="max-w-7xl mx-auto px-4 space-y-2">
-            <p>The Student Documentation Lab™ • Forensic Student Defense & Administrative Records Systems</p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p><strong>THE STUDENT DOCUMENTATION LAB™</strong> • ADMINISTRATIVE RECORDS SYSTEM • NOT LEGAL ADVICE</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="/">Return to Home</a> | 
+      <a href="https://www.youtube.com/@TheStudentDocumentationLab" target="_blank" rel="noopener">Official YouTube</a>
+    </p>
+  </footer>
 
 </body>
 </html>
