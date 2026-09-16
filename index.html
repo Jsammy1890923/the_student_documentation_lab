@@ -1,264 +1,391 @@
-<!DOCTYPE html>
+
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Student Documentation Lab™ | Master Defense Portal</title>
-  <meta name="description" content="Transform student distress into institutional-grade administrative audit trails. Turnkey forensic record-keeping for AI false positives and academic integrity inquiries.">
-  <link rel="canonical" href="https://studentdocumentationlab.tech/">
-
-  <!-- OpenGraph / Social Sharing -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="The Student Documentation Lab™ | Master Defense Portal">
-  <meta property="og:description" content="Stop Panicking. Start Documenting. Forensic defense frameworks to defeat false AI cheating accusations.">
-  <meta property="og:url" content="https://studentdocumentationlab.tech/">
-  <meta property="og:image" content="https://studentdocumentationlab.tech/01_turnitin_hero.png">
-
-  <!-- Payhip Native Checkout & Popup Script -->
-  <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
-
-  <!-- JSON-LD Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "The Student Documentation Lab™",
-    "url": "https://studentdocumentationlab.tech/",
-    "description": "Administrative record-keeping systems and forensic workflows for students facing academic integrity inquiries.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "The Student Documentation Lab™",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://studentdocumentationlab.tech/01_turnitin_hero.png"
-      }
-    }
-  }
-  </script>
-
-  <style>
-    :root {
-      /* Strategic Brand Palette */
-      --bg-primary: #0A0D14;
-      --bg-surface: #0D1626; /* Deep Navy */
-      --bg-card: #112240;
-      --text-main: #FFFFFF;
-      --text-muted: #94A3B8; /* Auditor Slate */
-      --neon-blue: #00D2FF;
-      --neon-mint: #00FFA3;
-      --neon-red: #FF3366; /* Evidentiary Crimson */
-      --border: #1E293B;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background-color: var(--bg-primary);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      padding-bottom: 5rem;
-    }
-
-    a { color: var(--neon-blue); text-decoration: none; transition: all 0.2s ease; }
-    a:hover { text-decoration: underline; color: var(--neon-mint); }
-
-    /* Top Emergency Alert Ribbon */
-    .emergency-ribbon {
-      background: rgba(255, 51, 102, 0.1);
-      border-bottom: 1px solid rgba(255, 51, 102, 0.3);
-      text-align: center;
-      padding: 0.75rem 1rem;
-      font-size: 0.9rem;
-      color: var(--text-main);
-      font-family: monospace;
-    }
-    .emergency-ribbon a { color: var(--neon-red); font-weight: 800; margin-left: 0.5rem; text-decoration: underline; }
-    .emergency-ribbon a:hover { color: #FFF; }
-
-    /* Main Navigation Bar */
-    header {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      gap: 1rem;
-    }
-
-    .brand-group { display: flex; flex-direction: column; }
-    .brand-title { font-size: 1.25rem; font-weight: 900; letter-spacing: -0.01em; color: #FFFFFF; }
-    .brand-sub { font-size: 0.75rem; font-family: monospace; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
-
-    .nav-actions { display: flex; align-items: center; gap: 1.25rem; font-size: 0.95rem; font-weight: 600; }
-
-    /* Hero Section */
-    .hero {
-      max-width: 800px;
-      margin: 5rem auto 3rem auto;
-      text-align: center;
-      padding: 0 1.5rem;
-    }
-
-    .badge-pill {
-      display: inline-block;
-      font-family: monospace;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--neon-blue);
-      background: rgba(0, 210, 255, 0.08);
-      border: 1px solid rgba(0, 210, 255, 0.25);
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
-    .hero h1 span { color: var(--neon-blue); display: block; }
-    .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem auto; line-height: 1.7; }
-
-    /* Red Zone -> Blue Zone Triage Banner */
-    .triage-banner {
-      background: var(--bg-surface);
-      border: 1px solid var(--neon-red);
-      border-left: 6px solid var(--neon-red);
-      border-radius: 8px;
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto 4rem auto;
-      text-align: left;
-    }
-    .triage-banner h3 { color: #FFFFFF; font-size: 1.3rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
-    .triage-banner p { color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.6; }
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheStudentDocumentationLab™ | Academic Misconduct & Forensic Defense</title>
+    <meta name="description" content="Administrative record-keeping systems and evidence structuring frameworks for academic defense." />
+  </head>
+  <body class="min-h-screen bg-slate-900 text-slate-100 font-sans antialiased">
     
-    .btn-emergency {
-      display: inline-block; background: var(--neon-red); color: #FFFFFF; font-weight: 800;
-      padding: 0.85rem 1.75rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;
-      text-decoration: none; transition: opacity 0.2s ease;
-    }
-    .btn-emergency:hover { opacity: 0.9; text-decoration: none; color: #FFF;}
-
-    /* Core Product Vault */
-    .vault-container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
-    .card {
-      background: var(--bg-surface);
-      border: 1px solid var(--neon-blue);
-      border-radius: 12px;
-      padding: 3rem 2.5rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-    .card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-    .card-icon { font-size: 2.5rem; }
-    .card h2 { font-size: 1.8rem; color: #FFFFFF; font-weight: 800; }
-    .card-desc { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.7; }
-
-    .action-grid { display: flex; flex-direction: column; gap: 1rem; }
-    .action-btn {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.25rem 1.5rem; border-radius: 8px; font-weight: 700; text-decoration: none;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-    .action-btn:hover { transform: translateY(-2px); text-decoration: none; }
-    
-    .btn-primary { background: linear-gradient(90deg, #00D2FF 0%, #00FFA3 100%); color: #0A0D14; border: none; }
-    .btn-primary:hover { opacity: 0.95; color: #0A0D14; }
-    
-    .btn-secondary { background: rgba(0, 255, 163, 0.05); border: 1px solid var(--neon-mint); color: var(--neon-mint); }
-    .btn-secondary:hover { background: rgba(0, 255, 163, 0.15); color: var(--neon-mint); }
-    
-    .btn-tertiary { background: rgba(0, 210, 255, 0.05); border: 1px solid var(--border); color: var(--text-main); }
-    .btn-tertiary:hover { border-color: var(--neon-blue); color: var(--text-main); }
-
-    /* Footer */
-    footer {
-      max-width: 1000px; margin: 5rem auto 0 auto; padding: 2rem 1.5rem 0 1.5rem;
-      border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: #64748B;
-    }
-    footer a { color: var(--neon-blue); text-decoration: none; margin: 0 0.5rem; }
-    footer p { margin-bottom: 0.5rem; }
-  </style>
-</head>
-<body>
-
-  <!-- Top Announcement Ribbon -->
-  <div class="emergency-ribbon" role="alert">
-    ⚠️ <strong>CRISIS TRIAGE:</strong> Falsely accused of AI cheating by Turnitin or your professor? 
-    <a href="#defense-hub">Execute the 24-Hour Defense Protocol &rarr;</a>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <div class="brand-group">
-      <div class="brand-title">The Student Documentation Lab™</div>
-      <div class="brand-sub">Administrative Records &amp; Academic Defense</div>
-    </div>
-    <nav class="nav-actions" aria-label="Main Navigation">
-      <a href="/disclaimer.html" style="color: var(--text-muted);">Legal</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <main>
-    <section class="hero">
-      <div class="badge-pill">The 51% Preponderance of Evidence Standard</div>
-      <h1>Stop Panicking.<span>Start Documenting.</span></h1>
-      <p>Transform raw student distress into institutional-grade administrative audit trails. Defeat probabilistic AI false-flags with deterministic, unalterable digital forensics.</p>
-    </section>
-
-    <!-- Emergency Triage Banner -->
-    <section class="triage-banner" aria-labelledby="triage-heading">
-      <h3 id="triage-heading">🚨 In the "Red Zone" (0-48 Hours)?</h3>
-      <p>Do not send an emotional apology. Universities run on administrative proof, not emotional appeals. Hitting send on a frantic email legally destroys your credibility before a hearing even begins. Shift to the "Blue Zone" and demand procedural discovery.</p>
-      <a href="#defense-hub" class="btn-emergency">Halt The Inquiry Now &rarr;</a>
-    </section>
-
-    <!-- Core Vault Section -->
-    <section class="vault-container" aria-labelledby="vault-heading">
-      <div class="card" id="defense-hub">
-        <div class="card-header">
-          <div class="card-icon">📂</div>
-          <h2 id="vault-heading">The Standard Baseline Defense Hub</h2>
-        </div>
-        <p class="card-desc">Your centralized repository for defeating standard honor code inquiries, Canvas DOM window blur errors, and Turnitin AI detection flags. Implement cryptographic integrity and MMDDYY_HHMM atomic filing rules today.</p>
+    <!-- ==================== 1. HEADER & 3-PORTAL NAVIGATION ==================== -->
+    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
-        <div class="action-grid">
-          <!-- Primary Conversion -->
-          <a href="https://payhip.com/buy?link=icTVm" class="action-btn btn-primary" target="_blank" rel="noopener">
-            <span>📥 Download The 24-Hour Response Kit™ ($27)</span>
-            <span>&rarr;</span>
-          </a>
+        <!-- Brand Identity -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center font-bold text-xl text-white shadow-lg shadow-red-600/30">
+            ⚖️
+          </div>
+          <div>
+            <span class="text-lg font-black tracking-tight text-white block leading-tight">
+              TheStudentDocumentationLab<span class="text-red-500">™</span>
+            </span>
+            <span class="text-[10px] font-mono text-slate-400 block tracking-wider uppercase">
+              ADMINISTRATIVE RECORDS SYSTEM
+            </span>
+          </div>
+        </div>
+
+        <!-- 3 Dedicated Blog Navigation Portals -->
+        <nav aria-label="Primary Navigation" class="hidden md:flex items-center space-x-2">
           
-          <!-- Lead Magnet -->
-          <a href="https://payhip.com/b/OTXF2" class="action-btn btn-secondary payhip-buy-button" data-theme="green" data-product="OTXF2">
-            <span>🎁 Get The 3-Sentence Evidence Request Script ($0)</span>
-            <span>&rarr;</span>
+          <!-- Portal 1: Main Feed -->
+          <a 
+            href="/blog" 
+            className="px-4 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:text-white hover:bg-slate-800/80 transition-all flex items-center space-x-2 border border-slate-800 hover:border-slate-700"
+          >
+            <span>📖</span>
+            <span>Main Forensic Feed</span>
           </a>
-          
-          <!-- Media/Education -->
-          <a href="https://www.youtube.com/watch?v=Ks9nbp74aJE" class="action-btn btn-tertiary" target="_blank" rel="noopener">
-            <span>▶️ Watch Forensic Defense Walkthrough (YouTube)</span>
-            <span>&nearr;</span>
+
+          <!-- Portal 2: Neurodiverse Branch -->
+          <a 
+            href="/neurodiverse" 
+            className="px-4 py-2 rounded-lg text-sm font-semibold text-purple-300 bg-purple-950/40 hover:bg-purple-900/60 border border-purple-800/50 hover:border-purple-600 transition-all flex items-center space-x-2 shadow-sm"
+          >
+            <span>🧠</span>
+            <span>Neurodiverse / ADA 504</span>
+          </a>
+
+          <!-- Portal 3: International Branch -->
+          <a 
+            href="/international" 
+            className="px-4 py-2 rounded-lg text-sm font-semibold text-blue-300 bg-blue-950/40 hover:bg-blue-900/60 border border-blue-800/50 hover:border-blue-600 transition-all flex items-center space-x-2 shadow-sm"
+          >
+            <span>🌐</span>
+            <span>International / F-1 Hub</span>
+          </a>
+
+        </nav>
+
+        <!-- Header Conversion Button -->
+        <div class="flex items-center space-x-3">
+          <a 
+            href="https://payhip.com/buy?link=icTVm" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="px-4 py-2 rounded-lg text-xs font-bold text-white bg-red-600 hover:bg-red-500 transition-all shadow-md shadow-red-600/20"
+          >
+            Emergency Kit ($27)
           </a>
         </div>
+
       </div>
-    </section>
-  </main>
+    </header>
 
-  <!-- Footer -->
-  <footer>
-    <p><strong>THE STUDENT DOCUMENTATION LAB™</strong> • ADMINISTRATIVE RECORDS SYSTEM • NOT LEGAL ADVICE</p>
-    <p>
-      <a href="/disclaimer.html">Terms &amp; Legal Disclaimer</a> | 
-      <a href="https://www.youtube.com/@TheStudentDocumentationLab" target="_blank" rel="noopener">Official YouTube</a>
-    </p>
-    <p style="margin-top: 1rem; font-size: 0.75rem; color: #475569;">
-      Administrative records management and educational self-help systems. For legal representation, consult a licensed attorney or campus ombudsman.
-    </p>
-  </footer>
+    <!-- ==================== 2. EMERGENCY TRIAGE HERO BANNER ==================== -->
+    <main id="main-content">
+      <section class="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-900 pt-12 pb-16 border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          
+          <!-- Red Zone Alert Badge -->
+          <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-red-950/80 border border-red-800/80 text-red-400 text-xs font-mono font-semibold uppercase tracking-wider mb-6 animate-pulse">
+            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+            <span>🚨 Emergency Triage: Red Zone (0–48 Hours)</span>
+          </div>
 
-</body>
+          <!-- Headline -->
+          <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+            Do Not Send an Emotional Apology.<br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-400 to-red-400">
+              Shift to Administrative Proof.
+            </span>
+          </h1>
+
+          <!-- Value Statement -->
+          <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+            Hitting send on a frantic email legally destroys your credibility before a hearing begins. 
+            Universities operate under the <strong>51% Preponderance of Evidence standard</strong>. 
+            Halt the inquiry today with unalterable document metadata and statutory FERPA discovery requests.
+          </p>
+
+          <!-- Conversion Action Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            
+            <!-- Payhip Conversion ($27) -->
+            <a 
+              href="https://payhip.com/buy?link=icTVm" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="p-4 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-sm shadow-xl shadow-red-900/30 transition-all flex flex-col justify-center items-center group border border-red-500/30"
+            >
+              <span class="text-lg mb-1">📥 Download 24-Hour Kit</span>
+              <span class="text-xs font-mono text-red-200 font-normal">($27 Complete Triage Suite) &rarr;</span>
+            </a>
+
+            <!-- Lead Magnet ($0) -->
+            <a 
+              href="https://payhip.com/b/OTXF2" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="p-4 rounded-xl bg-slate-800 hover:bg-slate-700/80 text-emerald-400 font-bold text-sm border border-emerald-500/40 hover:border-emerald-400 transition-all flex flex-col justify-center items-center group shadow-md"
+            >
+              <span class="text-lg mb-1">🎁 3-Sentence Script</span>
+              <span class="text-xs font-mono text-emerald-300/80 font-normal">($0 Free Evidence Request) &rarr;</span>
+            </a>
+
+            <!-- Media Walkthrough -->
+            <a 
+              href="https://www.youtube.com/watch?v=Ks9nbp74aJE" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="p-4 rounded-xl bg-slate-800 hover:bg-slate-700/80 text-blue-400 font-bold text-sm border border-blue-500/40 hover:border-blue-400 transition-all flex flex-col justify-center items-center group shadow-md"
+            >
+              <span class="text-lg mb-1">▶️ Watch Defense Guide</span>
+              <span class="text-xs font-mono text-blue-300/80 font-normal">(YouTube Walkthrough) &nearr;</span>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== 3. THREE DEMOGRAPHIC PORTALS GRID ==================== -->
+      <section class="py-16 bg-slate-950 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              Select Your Specialized Defense Branch
+            </h2>
+            <p class="text-sm text-slate-400 mt-2">
+              Tailored forensic frameworks for specific student demographic requirements
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Card 1: Main Blog Portal -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-red-950/80 border border-red-800/80 flex items-center justify-center text-2xl mb-4">
+                  📖
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Main Academic Line</h3>
+                <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+                  Designed for standard AI plagiarism false flags (Turnitin, Copyleaks), Canvas window-blur logs, and professor gradebook shock.
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 mb-6 font-mono">
+                  <li class="flex items-center">✔ Turnitin Asterisk (*%) Defense</li>
+                  <li class="flex items-center">✔ FERPA 34 CFR § 99.10 Discovery</li>
+                  <li class="flex items-center">✔ Keystroke & Revision Exports</li>
+                </ul>
+              </div>
+              <a 
+                href="/blog" 
+                class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold text-center border border-slate-700 transition-all block"
+              >
+                Explore Main Blog Feed &rarr;
+              </a>
+            </div>
+
+            <!-- Card 2: Neurodiverse Branch -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 border border-purple-900/40 hover:border-purple-700/60 transition-all flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-purple-950/80 border border-purple-800/80 flex items-center justify-center text-2xl mb-4">
+                  🧠
+                </div>
+                <h3 class="text-xl font-bold text-purple-200 mb-2">Neurodiverse & ADA 504</h3>
+                <p class="text-xs text-purple-300/70 mb-4 leading-relaxed">
+                  Protecting ADHD, Autistic, and Dyslexic scholars whose formulaic cognitive scaffolding is misidentified as AI burstiness.
+                </p>
+                <ul class="text-xs text-purple-200/80 space-y-2 mb-6 font-mono">
+                  <li class="flex items-center">✔ Stylometric Baseline Vector</li>
+                  <li class="flex items-center">✔ OAC Accommodation Disputes</li>
+                  <li class="flex items-center">✔ Bionic Focus Reading Mode</li>
+                </ul>
+              </div>
+              <a 
+                href="/neurodiverse" 
+                class="w-full py-2.5 rounded-lg bg-purple-950 hover:bg-purple-900 text-purple-200 text-xs font-bold text-center border border-purple-800 transition-all block"
+              >
+                Access Neurodiverse Hub &rarr;
+              </a>
+            </div>
+
+            <!-- Card 3: International Branch -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 border border-blue-900/40 hover:border-blue-700/60 transition-all flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-blue-950/80 border border-blue-800/80 flex items-center justify-center text-2xl mb-4">
+                  🌐
+                </div>
+                <h3 class="text-xl font-bold text-blue-200 mb-2">International & F-1 Visa</h3>
+                <p class="text-xs text-blue-300/70 mb-4 leading-relaxed">
+                  Preserving SEVIS status and I-20 records for international students facing high-stakes status crisis proceedings.
+                </p>
+                <ul class="text-xs text-blue-200/80 space-y-2 mb-6 font-mono">
+                  <li class="flex items-center">✔ 8 CFR § 214.2(f) SEVIS Stays</li>
+                  <li class="flex items-center">✔ Multilingual Drafting Trails</li>
+                  <li class="flex items-center">✔ Autocomplete Language UX</li>
+                </ul>
+              </div>
+              <a 
+                href="/international" 
+                class="w-full py-2.5 rounded-lg bg-blue-950 hover:bg-blue-900 text-blue-200 text-xs font-bold text-center border border-blue-800 transition-all block"
+              >
+                Access Global Student Hub &rarr;
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== 4. 4 ROTATING WORKHORSE FREEBIES ==================== -->
+      <section class="py-16 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+            <div>
+              <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest block mb-1">
+                SAMPLE SLICE METHODOLOGY
+              </span>
+              <h2 class="text-2xl font-bold text-white">4 Rotating Workhorse Free Tools ($0)</h2>
+            </div>
+            <p class="text-xs text-slate-400 mt-2 md:mt-0 max-w-md">
+              Directly download cite-ready administrative tools to execute procedural discovery today.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Workhorse A -->
+            <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-mono text-slate-500 uppercase block mb-2">WORKHORSE A</span>
+                <h4 class="text-sm font-bold text-white mb-2">24-Hour Crisis Intake Checklist</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Initial 48-hour triage checklist for AI false flags and cheating accusations.
+                </p>
+              </div>
+              <a 
+                href="https://payhip.com/b/OTXF2" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center justify-between"
+              >
+                <span>Download PDF ($0)</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+
+            <!-- Workhorse B -->
+            <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-mono text-slate-500 uppercase block mb-2">WORKHORSE B</span>
+                <h4 class="text-sm font-bold text-white mb-2">Grade Appeal Rubric Audit</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Policy mapping worksheet for challenging arbitrary grading deviations.
+                </p>
+              </div>
+              <a 
+                href="https://payhip.com/b/OTXF2" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center justify-between"
+              >
+                <span>Download Worksheet ($0)</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+
+            <!-- Workhorse C -->
+            <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-mono text-slate-500 uppercase block mb-2">WORKHORSE C</span>
+                <h4 class="text-sm font-bold text-white mb-2">Chain-of-Command Transmittal</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Formal escalation letter template for non-responsive faculty and chairs.
+                </p>
+              </div>
+              <a 
+                href="https://payhip.com/b/OTXF2" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center justify-between"
+              >
+                <span>Download Script ($0)</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+
+            <!-- Workhorse D -->
+            <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-mono text-slate-500 uppercase block mb-2">WORKHORSE D</span>
+                <h4 class="text-sm font-bold text-white mb-2">Statutory FERPA Demand</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Formal 34 CFR § 99.20 record amendment demand to clean transcripts.
+                </p>
+              </div>
+              <a 
+                href="https://payhip.com/b/OTXF2" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center justify-between"
+              >
+                <span>Download Demand ($0)</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ==================== 5. FOOTER & LEGAL DISCLAIMER ==================== -->
+    <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <span class="text-sm font-bold text-white block mb-3">TheStudentDocumentationLab™</span>
+            <p class="text-slate-500 leading-relaxed">
+              Administrative record-keeping systems and evidence structuring frameworks for academic defense.
+            </p>
+          </div>
+          <div>
+            <span class="text-sm font-bold text-white block mb-3">System Navigation</span>
+            <ul class="space-y-2 font-mono">
+              <li><a href="/blog" class="hover:text-white">Main Forensic Feed</a></li>
+              <li><a href="/neurodiverse" class="hover:text-white">Neurodiverse Branch</a></li>
+              <li><a href="/international" class="hover:text-white">International Hub</a></li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-sm font-bold text-white block mb-3">Statutory References</span>
+            <ul class="space-y-2 font-mono">
+              <li><span>34 CFR § 99.10 (FERPA Discovery)</span></li>
+              <li><span>Section 504 / Title II ADA</span></li>
+              <li><span>8 CFR § 214.2(f) (SEVIS Stays)</span></li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-sm font-bold text-white block mb-3">Administrative Architecture</span>
+            <p class="text-slate-500 leading-relaxed font-mono">
+              MMDDYY_HHMM 17-Department Folder Tree Specification Enabled.
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-slate-900 text-center text-slate-600 leading-relaxed">
+          <p class="mb-2">
+            <strong>DISCLAIMER & STATEMENT OF PURPOSE:</strong> TheStudentDocumentationLab™ provides administrative record-keeping systems, evidence structuring tools, and educational self-help frameworks. We are not a law firm, nor do we provide legal advice or guaranteed academic outcomes. What we offer is administrative clarity: curated procedural data and organizational tools to help you articulate your rights.
+          </p>
+          <p>&copy; 2026 TheStudentDocumentationLab™. All rights reserved.</p>
+        </div>
+
+      </div>
+    </footer>
+
+  </body>
 </html>
+```
+
