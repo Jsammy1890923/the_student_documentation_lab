@@ -1,4 +1,5 @@
 ---
+// src/pages/index.astro - Bright, Uplifting Light-Mode Triage Portal
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 ---
@@ -10,20 +11,20 @@ import Analytics from '@vercel/analytics/astro';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TheStudentDocumentationLab™ | Administrative Records System</title>
 </head>
-<body class="min-h-full bg-gradient-to-br from-slate-50 via-sky-50 to-purple-50 text-slate-800 antialiased flex flex-col justify-between selection:bg-cyan-500 selection:text-white">
+<body class="min-h-full bg-gradient-to-br from-[#f8fafc] via-[#e0f2fe] to-[#f3e8ff] text-slate-800 antialiased flex flex-col justify-between selection:bg-[#00d8ff] selection:text-slate-900">
 
   <!-- ==================== 1. WELCOME HEADER (CLEAN BRAND ONLY) ==================== -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-sky-100 shadow-xs">
+  <header class="sticky top-0 z-50 bg-white/75 backdrop-blur-md border-b border-sky-100 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Identity & Monogram -->
+      <!-- Neon Cyan Brand Monogram with Yellow Highlight -->
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-sky-400 flex items-center justify-center font-bold text-xl text-white shadow-md shadow-cyan-500/20">
+        <div class="w-10 h-10 rounded-xl bg-slate-900 border border-[#00d8ff]/40 flex items-center justify-center font-bold text-xl text-white shadow-md shadow-cyan-500/20">
           ⚖️
         </div>
         <div>
           <span class="text-lg font-black tracking-tight text-slate-900 block leading-tight">
-            <span class="text-cyan-600 bg-amber-100/90 px-1.5 py-0.5 rounded-md border border-amber-200">TheStudentDocumentationLab</span><span class="text-sky-600">™</span>
+            <span class="bg-amber-200 text-[#00a8cc] px-2 py-0.5 rounded-md font-extrabold shadow-xs">TheStudentDocumentationLab</span><span class="text-[#00a8cc]">™</span>
           </span>
           <span class="text-[10px] font-mono text-slate-500 block tracking-wider uppercase">
             ADMINISTRATIVE RECORDS SYSTEM
@@ -32,9 +33,9 @@ import Analytics from '@vercel/analytics/astro';
       </div>
 
       <!-- Triage Status Marker -->
-      <div class="flex items-center space-x-2 text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full shadow-xs">
+      <div class="flex items-center space-x-2 text-xs font-mono text-emerald-800 bg-emerald-100/80 border border-emerald-300 px-3.5 py-1.5 rounded-full shadow-xs">
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="hidden sm:inline font-semibold">STATUS:</span> <span class="font-medium">TRIAGE PORTAL ACTIVE</span>
+        <span class="hidden sm:inline font-bold">STATUS:</span> <span class="font-semibold">TRIAGE PORTAL ACTIVE</span>
       </div>
 
     </div>
@@ -42,30 +43,30 @@ import Analytics from '@vercel/analytics/astro';
 
   <!-- ==================== 2. WELCOME & ADMINISTRATIVE DISCLAIMER ==================== -->
   <main id="main-content" class="flex-grow">
-    <section class="relative overflow-hidden pt-14 pb-12">
+    <section class="relative overflow-hidden pt-14 pb-10">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
-        <p class="text-xs font-mono text-sky-700 uppercase tracking-widest mb-3 font-semibold">
+        <p class="text-xs font-mono text-sky-800 font-bold uppercase tracking-widest mb-3">
           WELCOME TO THE STUDENT DOCUMENTATION LAB™
         </p>
 
         <!-- Core Directive -->
         <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-6">
           Stop Panicking.<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-600 to-indigo-600">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-indigo-600 to-purple-600">
             Start Documenting.
           </span>
         </h1>
 
         <!-- Proof Standard Thesis -->
-        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
-          Universities operate on administrative proof under the <strong class="text-slate-900 font-semibold">51% Preponderance of Evidence standard</strong>. 
+        <p class="text-base sm:text-lg text-slate-700 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
+          Universities operate on administrative proof under the <strong class="text-slate-950 font-bold">51% Preponderance of Evidence standard</strong>. 
           Emotional pleas fail; unalterable document metadata succeeds.
         </p>
 
-        <!-- Reassuring Administrative Disclaimer Box -->
-        <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-xs border border-sky-100 text-left leading-relaxed shadow-sm">
-          <p class="text-slate-700 text-xs sm:text-sm font-normal">
+        <!-- Prominent Frosted Disclaimer Box -->
+        <div class="p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-white/60 text-left leading-relaxed shadow-md shadow-sky-900/5">
+          <p class="text-slate-800 text-xs sm:text-sm font-medium">
             <strong class="text-sky-700 font-bold uppercase tracking-wide">ADMINISTRATIVE DISCLAIMER & NOTICE:</strong> 
             TheStudentDocumentationLab™ provides administrative record-keeping systems, evidence structuring tools, and educational self-help frameworks. We are not a law firm, nor do we offer formal legal representation or guaranteed outcomes. What we provide is administrative clarity: curated procedural data to help you articulate your rights under university bylaws.
           </p>
@@ -74,18 +75,18 @@ import Analytics from '@vercel/analytics/astro';
       </div>
     </section>
 
-    <!-- ==================== 3. 4 COLOR-CODED PROFILE CARDS ==================== -->
+    <!-- ==================== 3. 4 COLOR-CODED FROSTED PROFILE CARDS ==================== -->
     <section class="py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-12">
-          <span class="text-xs font-mono text-cyan-700 font-bold uppercase tracking-widest block mb-2">
+          <span class="text-xs font-mono text-sky-800 font-bold uppercase tracking-widest block mb-2">
             STEP 1: SELECT YOUR DEFENSE BRANCH
           </span>
           <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
             What Type of Student Are You?
           </h2>
-          <p class="text-sm text-slate-600 mt-2 max-w-2xl mx-auto">
+          <p class="text-sm text-slate-700 mt-2 max-w-2xl mx-auto font-medium">
             Select your academic status below to enter your dedicated demographic portal containing your specialized Starter Kit, Blog Feed, and YouTube Video Walkthroughs:
           </p>
         </div>
@@ -93,88 +94,88 @@ import Analytics from '@vercel/analytics/astro';
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- PROFILE 01: Standard Line -->
-          <div class="bg-white/95 rounded-2xl p-6 border-2 border-sky-200 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-100 transition-all flex flex-col justify-between">
+          <div class="bg-white/85 backdrop-blur-md rounded-2xl p-6 border-2 border-sky-300 hover:border-sky-500 hover:shadow-xl hover:shadow-sky-200/50 transition-all flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-sky-600 font-bold uppercase tracking-widest block mb-1">PROFILE 01</span>
+              <span class="text-[10px] font-mono text-sky-700 font-bold uppercase tracking-widest block mb-1">PROFILE 01</span>
               <h3 class="text-xl font-black text-slate-900 mb-2">Standard Line</h3>
               <p class="text-xs text-slate-600 mb-5 leading-relaxed">
                 For general AI plagiarism false flags (Turnitin, Copyleaks), Canvas window-blur logs, and professor gradebook shock.
               </p>
-              <ul class="text-xs text-slate-700 space-y-2.5 mb-6 font-mono">
-                <li class="flex items-center text-sky-950"><span class="text-sky-500 mr-1.5 font-bold">✔</span> Standard 24h Response Kit</li>
-                <li class="flex items-center text-sky-950"><span class="text-sky-500 mr-1.5 font-bold">✔</span> Main Forensic Blog Feed</li>
-                <li class="flex items-center text-sky-950"><span class="text-sky-500 mr-1.5 font-bold">✔</span> YouTube Walkthrough Video</li>
+              <ul class="text-xs text-slate-800 space-y-2.5 mb-6 font-mono">
+                <li class="flex items-center"><span class="text-sky-600 mr-2 font-bold text-sm">✔</span> Standard 24h Response Kit</li>
+                <li class="flex items-center"><span class="text-sky-600 mr-2 font-bold text-sm">✔</span> Main Forensic Blog Feed</li>
+                <li class="flex items-center"><span class="text-sky-600 mr-2 font-bold text-sm">✔</span> YouTube Walkthrough Video</li>
               </ul>
             </div>
             <a 
               href="/blog" 
-              class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold text-center shadow-sm shadow-sky-600/30 transition-all block"
+              class="w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold text-center shadow-md shadow-sky-600/30 transition-all block"
             >
               Select Standard Line &rarr;
             </a>
           </div>
 
           <!-- PROFILE 02: Neurodiverse / 504 -->
-          <div class="bg-white/95 rounded-2xl p-6 border-2 border-purple-200 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-100 transition-all flex flex-col justify-between">
+          <div class="bg-white/85 backdrop-blur-md rounded-2xl p-6 border-2 border-purple-300 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-200/50 transition-all flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-purple-600 font-bold uppercase tracking-widest block mb-1">PROFILE 02</span>
+              <span class="text-[10px] font-mono text-purple-700 font-bold uppercase tracking-widest block mb-1">PROFILE 02</span>
               <h3 class="text-xl font-black text-purple-950 mb-2">Neurodiverse / 504</h3>
-              <p class="text-xs text-purple-900/80 mb-5 leading-relaxed">
+              <p class="text-xs text-purple-950/80 mb-5 leading-relaxed">
                 For ADHD, Autistic, and Dyslexic scholars whose structured cognitive scaffolding was falsely flagged as low burstiness.
               </p>
-              <ul class="text-xs text-purple-900/90 space-y-2.5 mb-6 font-mono">
-                <li class="flex items-center"><span class="text-purple-500 mr-1.5 font-bold">✔</span> Section 504 Accommodation Kit</li>
-                <li class="flex items-center"><span class="text-purple-500 mr-1.5 font-bold">✔</span> Neurodiverse Defense Feed</li>
-                <li class="flex items-center"><span class="text-purple-500 mr-1.5 font-bold">✔</span> ADA YouTube Walkthrough</li>
+              <ul class="text-xs text-purple-950 space-y-2.5 mb-6 font-mono">
+                <li class="flex items-center"><span class="text-purple-600 mr-2 font-bold text-sm">✔</span> Section 504 Accommodation Kit</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2 font-bold text-sm">✔</span> Neurodiverse Defense Feed</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2 font-bold text-sm">✔</span> ADA YouTube Walkthrough</li>
               </ul>
             </div>
             <a 
               href="/neurodiverse" 
-              class="w-full py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold text-center shadow-sm shadow-purple-600/30 transition-all block"
+              class="w-full py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold text-center shadow-md shadow-purple-600/30 transition-all block"
             >
               Select ADA 504 Branch &rarr;
             </a>
           </div>
 
           <!-- PROFILE 03: International / F-1 -->
-          <div class="bg-white/95 rounded-2xl p-6 border-2 border-cyan-200 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-100 transition-all flex flex-col justify-between">
+          <div class="bg-white/85 backdrop-blur-md rounded-2xl p-6 border-2 border-cyan-300 hover:border-cyan-500 hover:shadow-xl hover:shadow-cyan-200/50 transition-all flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-cyan-600 font-bold uppercase tracking-widest block mb-1">PROFILE 03</span>
+              <span class="text-[10px] font-mono text-cyan-800 font-bold uppercase tracking-widest block mb-1">PROFILE 03</span>
               <h3 class="text-xl font-black text-cyan-950 mb-2">International / F-1</h3>
-              <p class="text-xs text-cyan-900/80 mb-5 leading-relaxed">
+              <p class="text-xs text-cyan-950/80 mb-5 leading-relaxed">
                 For international scholars protecting SEVIS status, I-20 validity, and overcoming Stanford ESL detector bias.
               </p>
-              <ul class="text-xs text-cyan-900/90 space-y-2.5 mb-6 font-mono">
-                <li class="flex items-center"><span class="text-cyan-500 mr-1.5 font-bold">✔</span> 8 CFR § 214.2(f) SEVIS Hold Kit</li>
-                <li class="flex items-center"><span class="text-cyan-500 mr-1.5 font-bold">✔</span> Global Student Defense Feed</li>
-                <li class="flex items-center"><span class="text-cyan-500 mr-1.5 font-bold">✔</span> SEVIS YouTube Walkthrough</li>
+              <ul class="text-xs text-cyan-950 space-y-2.5 mb-6 font-mono">
+                <li class="flex items-center"><span class="text-cyan-600 mr-2 font-bold text-sm">✔</span> 8 CFR § 214.2(f) SEVIS Hold Kit</li>
+                <li class="flex items-center"><span class="text-cyan-600 mr-2 font-bold text-sm">✔</span> Global Student Defense Feed</li>
+                <li class="flex items-center"><span class="text-cyan-600 mr-2 font-bold text-sm">✔</span> SEVIS YouTube Walkthrough</li>
               </ul>
             </div>
             <a 
               href="/international" 
-              class="w-full py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold text-center shadow-sm shadow-cyan-600/30 transition-all block"
+              class="w-full py-2.5 rounded-xl bg-[#00a8cc] hover:bg-[#0092b3] text-white text-xs font-bold text-center shadow-md shadow-cyan-600/30 transition-all block"
             >
               Select Global Student Hub &rarr;
             </a>
           </div>
 
           <!-- PROFILE 04: Graduate & Med / Law -->
-          <div class="bg-white/95 rounded-2xl p-6 border-2 border-amber-200 hover:border-amber-400 hover:shadow-lg hover:shadow-amber-100 transition-all flex flex-col justify-between">
+          <div class="bg-white/85 backdrop-blur-md rounded-2xl p-6 border-2 border-amber-300 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-200/50 transition-all flex flex-col justify-between">
             <div>
-              <span class="text-[10px] font-mono text-amber-600 font-bold uppercase tracking-widest block mb-1">PROFILE 04</span>
+              <span class="text-[10px] font-mono text-amber-800 font-bold uppercase tracking-widest block mb-1">PROFILE 04</span>
               <h3 class="text-xl font-black text-amber-950 mb-2">Graduate & Med / Law</h3>
-              <p class="text-xs text-amber-900/80 mb-5 leading-relaxed">
+              <p class="text-xs text-amber-950/80 mb-5 leading-relaxed">
                 For pre-med (AMCAS), pre-law, and PhD scholars protecting transcripts, thesis research, and professional standing.
               </p>
-              <ul class="text-xs text-amber-900/90 space-y-2.5 mb-6 font-mono">
-                <li class="flex items-center"><span class="text-amber-500 mr-1.5 font-bold">✔</span> AMCAS / Bar High-Stakes Kit</li>
-                <li class="flex items-center"><span class="text-amber-500 mr-1.5 font-bold">✔</span> Graduate Defense Feed</li>
-                <li class="flex items-center"><span class="text-amber-500 mr-1.5 font-bold">✔</span> High-Stakes YouTube Video</li>
+              <ul class="text-xs text-amber-950 space-y-2.5 mb-6 font-mono">
+                <li class="flex items-center"><span class="text-amber-600 mr-2 font-bold text-sm">✔</span> AMCAS / Bar High-Stakes Kit</li>
+                <li class="flex items-center"><span class="text-amber-600 mr-2 font-bold text-sm">✔</span> Graduate Defense Feed</li>
+                <li class="flex items-center"><span class="text-amber-600 mr-2 font-bold text-sm">✔</span> High-Stakes YouTube Video</li>
               </ul>
             </div>
             <a 
               href="/graduate" 
-              class="w-full py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold text-center shadow-sm shadow-amber-600/30 transition-all block"
+              class="w-full py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold text-center shadow-md shadow-amber-600/30 transition-all block"
             >
               Select Graduate Hub &rarr;
             </a>
@@ -188,11 +189,11 @@ import Analytics from '@vercel/analytics/astro';
   </main>
 
   <!-- ==================== 4. FOOTER ==================== -->
-  <footer class="bg-white/80 border-t border-sky-100 py-10 mt-12">
+  <footer class="bg-white/70 backdrop-blur-md border-t border-sky-100 py-10 mt-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center leading-relaxed">
-        <p class="text-slate-700 text-xs sm:text-sm font-normal leading-relaxed mb-3">
+      <div class="p-6 rounded-2xl bg-white/80 border border-slate-200 text-center leading-relaxed shadow-xs">
+        <p class="text-slate-800 text-xs sm:text-sm font-medium leading-relaxed mb-3">
           <strong class="text-sky-700 font-bold uppercase tracking-wide">TheStudentDocumentationLab™ ADMINISTRATIVE RECORDS SYSTEM NOT LEGAL ADVICE:</strong><br />
           TheStudentDocumentationLab™ provides administrative record-keeping systems, evidence structuring tools, and educational self-help frameworks. We are not a law firm, nor do we offer formal legal representation or guaranteed academic outcomes.
         </p>
