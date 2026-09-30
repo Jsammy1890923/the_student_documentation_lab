@@ -1,39 +1,63 @@
-<div align="center">
+# Astro Starter Kit: Blog
 
-# The Student Documentation Lab™
-**Forensic Student Defense & Administrative Records System**
+```sh
+npm create astro@latest -- --template blog
+```
 
-![Status](https://img.shields.io/badge/Status-Production-00D2FF?style=for-the-badge)
-![Deployment](https://img.shields.io/badge/Deployment-GitHub_Pages-181717?style=for-the-badge&logo=github)
-![Tech Stack](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Tech Stack](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![License](https://img.shields.io/badge/License-Proprietary-FF3366?style=for-the-badge)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-</div>
+Features:
 
-Transform raw student distress into institutional-grade administrative audit trails. This repository houses the frontend architecture, documentation scaffolding, and deployment pipeline for The Student Documentation Lab™, providing turnkey forensic record-keeping workflows to defeat probabilistic AI false-flags (e.g., Turnitin).
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and Open Graph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
 
-## Core Defense Architecture
+## 🚀 Project Structure
 
-This repository is structured around deterministic, unalterable digital forensics designed to satisfy the **51% Preponderance of Evidence** standard utilized by university adjudications.
-
-*   **Crisis Triage Routing:** UI/UX pathways designed to shift users from the "Red Zone" (0-48 hours of emotional distress) into the "Blue Zone" (procedural discovery and administrative proof).
-*   **Atomic Filing Systems:** Documentation schemas enforcing strict `MMDDYY_HHMM` naming conventions to establish cryptographic integrity and verifiable timelines.
-*   **Semantic SEO Optimization:** Fully integrated JSON-LD structured data mapping for legal and educational defense search queries.
-
-## Repository Structure
+Inside of your Astro project, you'll see the following folders and files:
 
 ```text
-the_student_documentation_lab/
-├── .github/
-│   ├── ISSUE_TEMPLATE/       # Structured YAML issue templates for contributor friction reduction
-│   └── workflows/            # GitHub Actions for automated Page deployment and validation
-├── blog/
-│   ├── appeal-turnitin-ai-false-positive.html   # The 48-Hour Defense Protocol
-│   ├── how-to-defeat-false-ai-accusations.html  # Standard AI False Accusation Guide
-│   └── index.html                               # Blog Directory Hub & Table of Contents
-├── index.html                # Master Defense Portal & Primary Triage Storefront
-├── disclaimer.html           # Universal Ethical & Legal Governance Boundaries
-├── CONTRIBUTING.md           # Guidelines for repository contribution
-├── SECURITY.md               # Private vulnerability reporting protocol
-└── README.md                 # System Architecture & Overview
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Credit
+
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
